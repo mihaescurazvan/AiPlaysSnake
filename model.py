@@ -7,7 +7,7 @@ import os
 
 class Linear_QNet(nn.Module):
     def __init__(self, input_size, hidded_size, output_size):
-        super(Linear_QNet, self).__init__()
+        super().__init__()
         self.linear1 = nn.Linear(input_size, hidded_size)
         self.linear2 = nn.Linear(hidded_size, output_size)
 
@@ -66,7 +66,3 @@ class QTrainer:
         loss.backward()
 
         self.optimizer.step()
-
-
-
-
